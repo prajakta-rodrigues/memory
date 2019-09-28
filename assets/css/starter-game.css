@@ -1,0 +1,39 @@
+.tile {
+  width:180px;
+  height: 180px;
+}
+
+.open-tile {
+  background-color: white;
+  width:180px;
+  height: 180px;
+}
+
+.done-tile {
+  width: 180px;
+  height: 180px;
+  background-color: black;
+}
+
+
+button:focus {
+  background-color: transparent;
+  color: black;
+}
+
+button {
+  font-size: 5rem;
+  color: black;
+}
+
+.padding {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.replay {
+  font-size: 2rem;
+  color: aliceblue;
+  border-radius: 25%;
+  background-color: cadetblue;
+}
