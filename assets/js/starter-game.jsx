@@ -34,26 +34,17 @@ class Starter extends React.Component {
 
   initGameTiles() {
     let currentTileState = [];
-    let alphabets = [
-      [
-        'A', 'B', 'C', 'D'
-      ],
-      [
-        'E', 'F', 'G', 'H'
-      ],
-      [
-        'A', 'B', 'C', 'D'
-      ],
-      [
-        'E', 'F', 'G', 'H'
-      ]
-    ]
+    let alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    alpha = alpha.concat(alpha);
+    alpha.sort(() => Math.random() - 0.2);
+    let f = 0;
     for (var i = 0; i < 4; i++) {
       let k = [];
       for (var j = 0; j < 4; j++) {
-        k.push({class: "tile", value: alphabets[i][j],
+        k.push({class: "tile", value: alpha[f++],
           open: false, done: false});
       }
+
       currentTileState.push(k);
     }
     return currentTileState;
@@ -63,7 +54,6 @@ class Starter extends React.Component {
     for (var i = 0; i < currentTileState.length; i++) {
       for (var j = 0; j < currentTileState[i].length; j++) {
         if (currentTileState[i][j].done === false) {
-          console.log(i, j);
           return false;
         }
       }
@@ -73,8 +63,6 @@ class Starter extends React.Component {
 
   updateState(stateCopy) {
     this.setState(stateCopy);
-    console.log("state", stateCopy);
-
   }
 
   openTile(event) {
@@ -126,7 +114,7 @@ class Starter extends React.Component {
         var self = this;
         window.setTimeout(() => {
           this.closeUnmatchedTiles();
-        }, 3000);
+        }, 1000);
       }
     } else {
       stateCopy.openTiles.push(id);
