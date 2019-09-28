@@ -89,9 +89,12 @@ class Starter extends React.Component {
     let modcurrentTileState = stateCopy.currentTileState;
     let openTiles = stateCopy.openTiles;
 
-    if (modcurrentTileState[i][j].done === true) {
+    if (modcurrentTileState[i][j].done === true ||
+      modcurrentTileState[i][j].open === true) {
       return;
     }
+
+    stateCopy.score -= 2;
 
     if (openTiles.length == 1) {
       let one = openTiles[0];
@@ -107,7 +110,7 @@ class Starter extends React.Component {
         modcurrentTileState[iOne][jOne].done = true;
         modcurrentTileState[iOne][jOne].open = false;
         stateCopy.openTiles = [];
-        stateCopy.score += 20
+        stateCopy.score += 40
 
         let gameover = this.checkIfGameOver(stateCopy.currentTileState);
         if (gameover) {
@@ -185,12 +188,11 @@ class Starter extends React.Component {
         <h3>
           <button className="replay"
             onClick={this.restartGame.bind(this)}>Restart</button>
+          <span>
+            Current Score: {this.state.score}</span>
         </h3>
         <div>
           {items}
-        </div>
-        <div>
-          <h2>Current Score: {this.state.score}</h2>
         </div>
       </div>)
     } else {
@@ -198,8 +200,9 @@ class Starter extends React.Component {
         <h1>
           Game Over!! Your score is {this.state.score}.
         </h1>
-        <button className="replay"
-          onClick={this.restartGame.bind(this)}>Play Again</button>
+        <button className="replay" onClick={this.restartGame.bind(this)}>
+          Play Again
+        </button>
       </div>)
     }
   }

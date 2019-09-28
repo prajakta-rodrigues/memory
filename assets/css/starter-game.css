@@ -1,18 +1,19 @@
 .tile {
-  width:180px;
-  height: 180px;
+  width:150px;
+  height: 150px;
+  background-color: cadetblue;
 }
 
 .open-tile {
-  background-color: white;
-  width:180px;
-  height: 180px;
+  background-color: antiquewhite;
+  width:150px;
+  height: 150px;
 }
 
 .done-tile {
-  width: 180px;
-  height: 180px;
-  background-color: black;
+  width: 150px;
+  height: 150px;
+  background-color: darkslateblue;
 }
 
 
