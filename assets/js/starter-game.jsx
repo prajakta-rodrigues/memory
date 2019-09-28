@@ -34,15 +34,28 @@ class Starter extends React.Component {
 
   initGameTiles() {
     let currentTileState = [];
-    let alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    let alpha = [
+      'A',
+      'B',
+      'C',
+      'D',
+      'E',
+      'F',
+      'G',
+      'H'
+    ]
     alpha = alpha.concat(alpha);
     alpha.sort(() => Math.random() - 0.2);
     let f = 0;
     for (var i = 0; i < 4; i++) {
       let k = [];
       for (var j = 0; j < 4; j++) {
-        k.push({class: "tile", value: alpha[f++],
-          open: false, done: false});
+        k.push({
+          class: "tile",
+          value: alpha[f++],
+          open: false,
+          done: false
+        });
       }
 
       currentTileState.push(k);
@@ -77,8 +90,7 @@ class Starter extends React.Component {
     let modcurrentTileState = stateCopy.currentTileState;
     let openTiles = stateCopy.openTiles;
 
-    if (modcurrentTileState[i][j].done === true ||
-      modcurrentTileState[i][j].open === true) {
+    if (modcurrentTileState[i][j].done === true || modcurrentTileState[i][j].open === true) {
       return;
     }
 
@@ -89,8 +101,7 @@ class Starter extends React.Component {
       let iOne = one.split(" ")[0];
       let jOne = one.split(" ")[1];
 
-      if (modcurrentTileState[i][j].value ==
-        modcurrentTileState[iOne][jOne].value) {
+      if (modcurrentTileState[i][j].value == modcurrentTileState[iOne][jOne].value) {
         modcurrentTileState[i][j].class = "done-tile"
         modcurrentTileState[i][j].done = true;
         modcurrentTileState[i][j].open = false;
@@ -149,17 +160,13 @@ class Starter extends React.Component {
       for (var j = 0; j < 4; j++) {
         if (this.state.currentTileState[i][j].open) {
           item.push(<div key={(j * 21) + i} className="column-10 padding">
-            <button key={"btnkey" + i + "" + j} id={i + " " + j}
-              className={this.state.currentTileState[i][j].class}
-              onClick={(e) => this.openTile(e)}>
+            <button key={"btnkey" + i + "" + j} id={i + " " + j} className={this.state.currentTileState[i][j].class} onClick={(e) => this.openTile(e)}>
               {this.state.currentTileState[i][j].value}
             </button>
           </div>);
         } else {
           item.push(<div key={(j * 21) + i} className="column-10 padding">
-            <button key={"btnkey" + i + "" + j} id={i + " " + j}
-              className={this.state.currentTileState[i][j].class}
-              onClick={(e) => this.openTile(e)}></button>
+            <button key={"btnkey" + i + "" + j} id={i + " " + j} className={this.state.currentTileState[i][j].class} onClick={(e) => this.openTile(e)}></button>
           </div>);
         }
 
@@ -174,10 +181,11 @@ class Starter extends React.Component {
           Memory Test Game
         </h1>
         <h3>
-          <button className="replay"
-            onClick={this.restartGame.bind(this)}>Restart</button>
-          <span>
-            Current Score: {this.state.score}</span>
+          <button className="replay" onClick={this.restartGame.bind(this)}>Restart</button>
+        </h3>
+        <h3>
+
+          Current Score: {this.state.score}
         </h3>
         <div>
           {items}

@@ -1,12 +1,12 @@
 .tile {
-  width:150px;
+  width: 150px;
   height: 150px;
   background-color: cadetblue;
 }
 
 .open-tile {
   background-color: antiquewhite;
-  width:150px;
+  width: 150px;
   height: 150px;
 }
 
@@ -16,15 +16,19 @@
   background-color: darkslateblue;
 }
 
-
 button:focus {
-  background-color: transparent;
-  color: black;
+  outline: none;
+  background: none;
+  color: inherit;
 }
 
 button {
   font-size: 5rem;
   color: black;
+}
+
+h1 {
+  color: darkslateblue;
 }
 
 .padding {
