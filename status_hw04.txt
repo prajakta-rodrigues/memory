@@ -12,12 +12,12 @@ https://github.com/prajakta-rodrigues/memory.git
 
 
 3. What's the URL that you deployed to?
-http://memory1.prajaktarodrigues.website
+http://memory2.prajaktarodrigues.website
 
 
 
 4. Is your game functionality complete? If not, what's missing?
-Complete
+Everything is complete except timeout of flipping cards is handled.
 
 
 
@@ -37,5 +37,3 @@ And here's a list of tasks for grading comments. Just leave this here:
  - AA
  - BB
  - CC
-
-
