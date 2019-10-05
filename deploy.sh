@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export MIX_ENV=prod
-export PORT=4791
+export PORT=3791
 export NODEBIN=`pwd`/assets/node_modules/.bin
 export PATH="$PATH:$NODEBIN"
 
@@ -25,4 +25,3 @@ mix release
 echo "Starting app..."
 
 _build/prod/rel/memory/bin/memory start
-

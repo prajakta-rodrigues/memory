@@ -1,3 +1,14 @@
-<div id="root">
-  React app loading...
+<div class="row">
+  <div class="column">
+    <h1 id="index-page">Join a Game</h1>
+    <p><a href="/game/demo">Join "demo"</a></p>
+    Enter your game name:<input id ="name" value="" type="text">
+    <button class="submit" onclick="getValue()">Submit</button>
+  </div>
 </div>
+<script>
+  function getValue() {
+    var name = document.getElementById("name").value;
+    window.location = "/game/" + name;
+  }
+</script>
