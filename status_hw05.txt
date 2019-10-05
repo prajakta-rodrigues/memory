@@ -24,3 +24,12 @@ Yes. I was unable to implement the tiles flipping back after timeout.
 
 5. Is your game properly deployed? If not, what went wrong?
 Yes
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Development
+ - Deployment
+ - Submission
+ - AA
+ - BB
+ - CC
