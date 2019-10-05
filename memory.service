@@ -6,7 +6,7 @@ Type=simple
 User=memory
 Group=memory
 Restart=on-failure
-Environment=MIX_ENV=prod "PORT=4791"
+Environment=MIX_ENV=prod "PORT=3791"
 Environment=LANG=en_US.UTF-8
 
 WorkingDirectory=/home/memory/memory
