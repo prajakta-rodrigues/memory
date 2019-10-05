@@ -1,18 +1,18 @@
 .tile {
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   background-color: cadetblue;
 }
 
 .open-tile {
   background-color: antiquewhite;
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
 }
 
 .done-tile {
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   background-color: darkslateblue;
 }
 
@@ -40,5 +40,10 @@ h1 {
   font-size: 2rem;
   color: aliceblue;
   border-radius: 25%;
+  background-color: cadetblue;
+}
+.submit {
+  height: 40px;
+  font-size: 2rem;
   background-color: cadetblue;
 }
