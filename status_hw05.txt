@@ -1,0 +1,26 @@
+Please fill in answers to the questions below:
+
+
+1. What's your name?
+Prajakta Rodrigues
+
+
+
+2. What's the URL of the github repo with your work for this HW?
+https://github.com/prajakta-rodrigues/memory.git
+
+
+
+3. What's the URL that you deployed to?
+http://memory2.prajaktarodrigues.website
+
+
+
+4. Is your game functionality complete, with the appropriate logic implemented
+as server-side elixir code? If not, what's missing?
+Yes. I was unable to implement the tiles flipping back after timeout.
+
+
+
+5. Is your game properly deployed? If not, what went wrong?
+Yes
