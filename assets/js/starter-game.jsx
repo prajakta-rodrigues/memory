@@ -28,14 +28,11 @@ class Starter extends React.Component {
 
 
   server_response(view) {
-    console.log("new view", view.game);
-    var cur = view.game.currentTileState;
     this.setState(view.game);
   }
 
 
   restartGame() {
-    console.log("restart");
     this.channel.push("restart-game")
     .receive("ok", this.server_response.bind(this));
   }
@@ -44,10 +41,6 @@ class Starter extends React.Component {
   openTile(event) {
     this.channel.push("tile-click", {id: event.target.id})
     .receive("ok", this.server_response.bind(this));
-  }
-
-  closeUnmatchedTiles() {
-
   }
 
   render() {
