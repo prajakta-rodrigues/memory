@@ -1,5 +1,17 @@
-# Memory
+## Overview
+Memory is a simple game which tests your memory using tiles.
 
+## Contributing
+Feel free to add your own version or improve existing version by forking the repository and  raising a pull request.
+
+## Requirements
+1. Node v11+ and npm
+2. Elixir 1.6+
+3. Erlang 20+
+4. PostgreSQL
+5. Phoenix Application Generator
+
+## Install
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
